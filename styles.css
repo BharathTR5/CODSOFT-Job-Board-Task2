@@ -181,7 +181,7 @@ header{
     justify-content: center;
     align-items: start;
     height: auto;
-    padding: 5rem 0;
+    padding: 5rem 2rem;
   }
   .h-right{
     display: none;
