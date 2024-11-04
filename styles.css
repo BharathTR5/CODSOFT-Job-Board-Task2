@@ -42,6 +42,11 @@ h3 {
 
 header{
   background-color: #1f4a40;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99;
 
   nav{
     display: flex;
@@ -89,7 +94,7 @@ header{
       box-shadow: 2px 2px 20px rgb(124, 124, 124);
       border-radius: 20px;
       position: absolute;
-      right: -300px;
+      right: -100%;
       top: 3.2rem;
       padding: 20px 30px;
       justify-content: center;
@@ -108,6 +113,7 @@ header{
         color: white;
         margin: 15px 0 0 0;
         font-size: 1rem;
+        cursor: pointer;
       }
     }
     ul.active{
@@ -118,5 +124,69 @@ header{
   #bar{
     display: block;
   }
-  
+}
+
+
+/* Hero */
+.hero{
+  background-color: #1f4a40;
+}
+.hero-box{
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  align-items: center;
+}
+.h-right{
+  width: 50%;
+  img{
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.h-left{
+  width: 45%;
+  color: white;
+}
+.h-left p{
+  padding: 1.2rem 0;
+}
+.search{
+  position: relative;
+}
+.search input{
+  width: 100%;
+  height: 4rem;
+  border-radius: 35px;
+  padding: 0 20px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+}
+.search a{
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  text-decoration: none;
+  background-color: #1f4a40;
+  color: white;
+  padding: 9px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 699px){
+  .hero-box{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: start;
+    height: auto;
+    padding: 5rem 0;
+  }
+  .h-right{
+    display: none;
+  }
+  .h-left{
+    width: 100%;
+  }
 }
