@@ -338,3 +338,66 @@ header{
   }
   
 }
+
+
+/* Footer */
+footer{
+  background-color: #1f4a40;
+  color: white;
+  padding: 4rem 0;
+}
+.top{
+  display: flex;
+  align-items: center;
+  text-align: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.top .logo{
+  width: 170px;
+  margin-bottom: 1rem;
+}
+.top i{
+  color: white;
+  font-size: 2rem;
+  margin-left: 0.5rem;
+}
+
+.bottom{
+  display: flex;
+  align-items: center;
+  text-align: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+}
+
+.bottom div{
+  display: flex;
+  flex-direction: column;
+}
+.bottom a{
+  text-decoration: none;
+  color: white;
+  line-height: 35px;
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 699px){
+  .bottom div{
+    width: 50%;
+    margin-bottom: 50px;
+  }
+  .top i{
+    margin: 1rem 1rem 0 0;
+  }
+  .top{
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .obj-width{
+    width: 95%;
+  }
+}
