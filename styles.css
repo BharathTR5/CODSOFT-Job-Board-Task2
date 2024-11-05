@@ -288,3 +288,53 @@ header{
 .trust .t-box img{
   margin: 1rem 1rem 1rem 0;
 }
+#g-btn{
+  background-color: #1f4a40;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.team-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.team-container .fl-box{
+  border: 1px solid #ccc;
+  width: 280px;
+  padding: 2rem 0;
+  border-radius: 20px;
+  margin: 3rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.fl-box img{
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+#key{
+  background-color: #edcfee;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  border-radius: 20px;
+}
+.skill{
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 699px){
+  .team-container .fl-box{
+    width: 48%;
+    text-align: center;
+  }
+  .skill{
+    padding-bottom: 1rem;
+  }
+  
+}
