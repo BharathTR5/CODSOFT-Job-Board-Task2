@@ -210,3 +210,68 @@ header{
 .features .fe-box div {
   width: 40%;
 }
+
+/* List filter section */
+.jobs .job-id{
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.jobs .job-id li{
+  padding: 20px 40px;
+  cursor: pointer;
+}
+.jobs .job-id li.active{
+  background-color: #1f4a40;
+  color: white;
+}
+.jobs .jlist{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 3rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  align-items: center;
+  cursor: pointer;
+  color: black;
+  padding: 2rem 2rem;
+}
+.jobs .jlist.delete{
+  display: none;
+}
+.jobs .jlist:hover{
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 1);
+}
+.jobs .jlist img{
+  width: 40px;
+}
+.jlist h3{
+  padding-bottom: 0;
+}
+
+@media screen and (max-width: 699px){
+  .jobs .job-id {
+    position: relative;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+.jobs-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+  .jobs .jlist{
+    grid-template-columns: repeat(1, 1fr);
+    width: 48%;
+    gap: 15px;
+    justify-items: center;
+  }
+
+  .jobs .job-id li{
+    padding: 20px 20px;
+    text-wrap: nowrap;
+  }
+}
