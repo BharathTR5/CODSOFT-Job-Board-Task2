@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hire Hub</title>
+  
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header>
+  <nav class="obj-width">
+    <img src="../Images/logo.png" alt="logo" class="logo">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../Browse Jobs/job.html">Browse Jobs</a></li>
+      <li><a href="#">Contact</a></li>
+      <button>Join</button>
+    </ul>
+    <i class='bx bx-menu' id="bar"></i>
+  </nav>
+</header>
+
+  <div class="jobDetails extra-space obj-width">
+    
+  </div>
+
+  <!-- Footer Section -->
+   <footer class="footer sec-space" id="">
+    <div class="footer-container obj-width">
+      <div class="top">
+        <div>
+          <img src="../Images/logo.png" alt="" class="logo">
+          <p>Search your desired jobs</p>
+        </div>
+        <div>
+          <a href="https://www.youtube.com"><i class='bx bxl-facebook-square'></i></a>
+          <a href="https://www.youtube.com"><i class='bx bxl-twitter'></i></a>
+          <a href="https://www.youtube.com"><i class='bx bxl-instagram-alt'></i></a>
+          <a href="https://www.youtube.com"><i class='bx bxl-linkedin-square'></i></a>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <div>
+          <h3>Project</h3>
+          <a href="#">Changelog</a>
+          <a href="#">Status</a>
+          <a href="#">License</a>
+          <a href="#">All Versions</a>
+        </div>
+
+        <div>
+          <h3>Community</h3>
+          <a href="#">Github</a>
+          <a href="#">Issues</a>
+          <a href="#">Projects</a>
+          <a href="#">Twitter</a>
+        </div>
+
+        <div>
+          <h3>Help</h3>
+          <a href="#">Support</a>
+          <a href="#">Troubleshooting</a>
+          <a href="#">Contact us</a>
+        </div>
+
+        <div>
+          <h3>Others</h3>
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">License</a>
+          <a href="#"></a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=> {
+      const urlParam= new URLSearchParams(window.location.search);
+      const index = urlParam.get('id');
+
+      const selectJob = jCategory[index];
+
+      const jobDetails = document.querySelector('.jobDetails');
+
+      jobDetails.innerHTML = `
+        <div class="jobHeader">
+      <div class="job-img-row">
+        <img src="${selectJob.image}" alt="">
+          <div>
+            <h2>${selectJob.company}</h2>
+            <span>${selectJob.location}</span>
+          </div>
+      </div>
+      <a href="#" id="g-btn">Apply Now</a>
+    </div>
+    <div class="features features1 obj-width" id="">
+     
+      <div class="fe-box">
+        <div>
+          <img src="../Images/vacancy.png" alt="">
+          <h3>Vacancy</h3>
+          <p>${selectJob.vacancy} Vacancy</p>
+        </div>
+    
+        <div>
+         <img src="../Images/fe 1.png" alt="">
+         <h3>Position</h3>
+         <p>${selectJob.title}</p>
+        </div>
+    
+        <div>
+          <img src="../Images/hour.png" alt="">
+          <h3>Hours</h3>
+          <p>${selectJob.hours}</p>
+        </div>
+    
+        <div>
+          <img src="../Images/salary.png" alt="">
+          <h3>Salary</h3>
+          <p>${selectJob.salary}</p>
+        </div>
+      </div>
+
+      <div class="job-description sec-space">
+         <h3>Job Description</h3>
+         <p>${selectJob.description}</p>
+
+         <h3>Employment Status</h3>
+         <p>- ${selectJob.jobType}</p>
+
+         <h3>Workplace</h3>
+         <p>${selectJob.workplace}</p>
+
+         <h3>Educational Requirements</h3>
+         <p>- ${selectJob.education}</p>
+
+         <h3>Experience</h3>
+         <p>- ${selectJob.experience}</p>
+
+      </div>
+    </div>
+      `;
+    })
+  </script>
+
+  <script src="jobs-list.js"></script>
+  <script src="jobSearch.js"></script>
+</body>
+</html>
